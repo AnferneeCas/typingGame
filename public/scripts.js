@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("anfer.herokuapp.com/socket.io/?EIO=4&transport=websocket");
 var challenge ="";
 joinRoom("game1");
 socket.on("message",function(msg){
