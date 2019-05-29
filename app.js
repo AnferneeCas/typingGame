@@ -7,6 +7,9 @@ var rooms=[
     {challenge: "Quis hamburger meatball burgdoggen. Leberkas dolore tail fatback andouille aliquip eiusmod ut ground round. In venison pork loin boudin pastrami incididunt. Frankfurter occaecat doner aute sausage. Chicken beef ribs est voluptate exercitation pig t-bone pork chop frankfurter capicola strip steak shoulder aliquip. Ut turducken esse frankfurter short ribs laboris.",gameId:"game3"}
 ]
 app.use(express.static(__dirname+'/public'));
+app.get("*",function(req,res){
+    res.render(__dirname + '/public/index.ejs');
+})
 
 const expressServer = app.listen(3000);
 const io = socketio(expressServer);
