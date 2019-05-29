@@ -1,4 +1,4 @@
-const socket = io("anfer.herokuapp.com/socket.io/?EIO=4&transport=websocket");
+const socket = io("anfer.herokuapp.com");
 var challenge ="";
 joinRoom("game1");
 socket.on("message",function(msg){
