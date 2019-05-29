@@ -1,5 +1,7 @@
 var express = require('express');
 var app = express();
+app.set('view engine', 'ejs');
+var port = process.env.PORT||3000;
 var socketio = require("socket.io");
 var rooms=[
     {challenge: "Spicy jalapeno spare ribs pork proident est. Consequat pancetta aliqua sint, nostrud capicola do. Spare ribs labore swine ribeye filet mignon ham hock nulla biltong meatloaf ut ea est aute chicken. Swine velit pancetta ex fugiat non ham beef flank shoulder officia pork loin short ribs buffalo. Meatloaf picanha enim, fatback id ullamco eiusmod ground round cow burgdoggen et flank laborum. Kielbasa shankle pariatur aute, tempor ad frankfurter commodo strip steak ball tip salami in. Do boudin turducken consectetur ut id.",gameId:"game1"},
@@ -11,7 +13,7 @@ app.get("*",function(req,res){
     res.render(__dirname + '/public/index.ejs');
 })
 
-const expressServer = app.listen(3000);
+const expressServer = app.listen(port);
 const io = socketio(expressServer);
 
 
