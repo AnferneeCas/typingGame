@@ -2,14 +2,30 @@
 <html>
 <head>
     <title>Typing Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <p id="textChallenge"></p>
-    <textarea id="player1" rows="4" cols="50"></textarea>
-    <textarea id="player2" rows="4" cols="50" disabled></textarea>
-    <div class="bannerWinner"> GANASTE </div>
-    <div class="bannerLoser"> PERDISTE GAI </div>
+
+    <div class="player1Playground">
+        <div class="textBox"><span id="textChallenge"></span></div>
+        
+        <span class="form-group">
+            <textarea class="form-control"id="player1" rows="20" cols="80"></textarea>
+        </span>
+        
+    
+         <div class="bannerWinner"> GANASTE </div>
+         <div class="bannerLoser"> PERDISTE GAI </div>
+    </div>
+
+    <div class="player2Playground">
+           <span class="form-group">
+            <textarea id="player2" class="form-control" rows="4" cols="50" disabled></textarea>
+           </span>
+           
+    </div>
 </body>
 <script src="/socket.io/socket.io.js"></script>
 <script src="./joinRoom.js"></script>

@@ -1,13 +1,46 @@
-html{
-    min-width: 100%;
-    min-height: 100%;
+html,body{
+    margin:0;
+    padding:0;
+    height:100%;
+    width: 100%;
 }
+
+div.player1Playground{
+  min-width: 100%;
+  min-height: 50%;
+  background-color: rgb(14, 41, 53);  
+}
+
+.textBox{
+    padding-top: 15px;
+    border:2px solid white;
+    text-align: center;
+}
+#textChallenge{ 
+    font-size: 1.3em;
+    font-weight: bold;
+    color:white;
+}
+#player1{
+    display: inherit;
+   
+    margin-top: 10px;
+
+}
+div.player2Playground{
+    min-width: 100%;
+    min-height: 50%;
+    background-color:#06B184;
+}
+
 #player2{
-    
+    display: inherit;
+   
+    margin-top: 10px;
 }
 
 .correctChar{
-    background-color: blueviolet;
+    background-color: #06B184;
 }
 
 .bannerWinner{
