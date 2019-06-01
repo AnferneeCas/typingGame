@@ -13,14 +13,16 @@ socket.on("updateChallenge",function(newChallenge){
 });
 
 socket.on("win",function(){
-    var banner= document.querySelector(".bannerWinner");
-    banner.setAttribute("style","visibility: visible;")
+
+    document.querySelector(".banner").style.opacity=1;
+    document.querySelector(".bannerText").textContent="WINNER";
     console.log("YOu have won");
+
 });
 
 socket.on("loss",function(){
-    var banner= document.querySelector(".bannerLoser");
-    banner.setAttribute("style","visibility: visible;")
+    document.querySelector(".banner").style.opacity=1;
+    document.querySelector(".bannerText").textContent="LOSER";
     document.getElementById("player1").disabled = true;
     console.log("YOu have lost");
 });

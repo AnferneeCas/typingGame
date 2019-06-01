@@ -8,13 +8,14 @@ function joinRoom(roomName){
     })
 
     textArea.addEventListener('paste',function(e){
-        e.preventDefault();
+      //  e.preventDefault();
         console.log("no paste permitted");
     })
     
     socket.on('newChange',function(newChange){
         var textArea2 = document.querySelector('#player2');
         textArea2.value = newChange;
+        textArea2.scrollTop = textArea2.scrollHeight;
     })
 }
 
