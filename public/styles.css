@@ -1,4 +1,54 @@
 html,body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.playground1{
+    display: flex;
+
+    width: 100%;
+    height: 75%;
+    background-color: rgb(14, 41, 53);
+}
+
+
+.playground2{
+    display: flex;
+    background-color:#06B184;
+    width: 100%;
+    height: 25%;
+}
+.form-group{
+    margin-top: 2%;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 2%;
+}
+#player1{
+    display: block;
+  
+}
+#player2{
+    height: -webkit-fill-available;
+  
+}
+.correctChar{
+    background-color: #06B184;
+}
+.content{
+    
+    height: 100%;
+    width: 100%;
+}
+#textChallenge{ 
+    font-size: 1.3em;
+    font-weight: bold;
+    color:white;
+}
+
+/* html,body{
     margin:0;
     padding:0;
     height:100%;
@@ -6,9 +56,15 @@ html,body{
 }
 
 div.player1Playground{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
   min-width: 100%;
   min-height: 50%;
   background-color: rgb(14, 41, 53);  
+}
+.form-group{
+   
 }
 
 .textBox{
@@ -23,11 +79,11 @@ div.player1Playground{
 }
 #player1{
     display: inherit;
-   
-    margin-top: 10px;
-
-}
+  }
 div.player2Playground{
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 25px;
     min-width: 100%;
     min-height: 50%;
     background-color:#06B184;
@@ -35,8 +91,7 @@ div.player2Playground{
 
 #player2{
     display: inherit;
-   
-    margin-top: 10px;
+
 }
 
 .correctChar{
@@ -54,4 +109,4 @@ div.player2Playground{
     min-height: 100%;
     border: 2px solid pink;
     visibility: hidden;
-}
+} */

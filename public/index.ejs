@@ -1,6 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class= "playground1">
+        <div class="content">
+            <div class="textBox"><p id="textChallenge"></p></div>
+            <div class="form-group">
+                <textarea class="form-control"id="player1" rows="20" cols="80"></textarea>
+            </div>
+        </div>
+           
+    </div>
+
+    <div class= "playground2">
+        <div class="content">
+            <div class="form-group">
+                <textarea class="form-control"id="player2" rows="20" cols="80"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="./joinRoom.js"></script>
+<script src="/scripts.js"></script>
+</html>
+
+
+
+<!--   <!DOCTYPE html>
+<html>
+<head>
     <title>Typing Game</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
@@ -11,9 +44,9 @@
     <div class="player1Playground">
         <div class="textBox"><span id="textChallenge"></span></div>
         
-        <span class="form-group">
+        <div class="form-group">
             <textarea class="form-control"id="player1" rows="20" cols="80"></textarea>
-        </span>
+        </div>
         
     
          <div class="bannerWinner"> GANASTE </div>
@@ -21,9 +54,9 @@
     </div>
 
     <div class="player2Playground">
-           <span class="form-group">
+           <div class="form-group">
             <textarea id="player2" class="form-control" rows="4" cols="50" disabled></textarea>
-           </span>
+           </div>
            
     </div>
 </body>
@@ -33,4 +66,4 @@
 
 
 
-</html>
+</html> --> 
