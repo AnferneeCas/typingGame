@@ -41,7 +41,8 @@ io.on('connection',function(socket){
          text: "hey"
      });
      socket.on('inputChange',function(change,challenge){
-        const roomTitle = Object.keys(socket.rooms)[1];
+         console.log(socket.rooms);
+        const roomTitle = Object.keys(socket.rooms)[0];
         console.log(roomTitle);
         socket.broadcast.to(roomTitle).emit('newChange',change);
         var win=true;
