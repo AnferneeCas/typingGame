@@ -1,0 +1,59 @@
+html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    background-color: rgb(14, 41, 53);;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.title-banner{
+    display: flex;
+    height: 40%;
+
+}
+
+.title{
+    margin: auto;
+    color: white;
+    font-size: 7em;
+}
+
+.content{
+    height: 60%;
+    display: flex;   
+}
+.buttons{
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 1s ease-out;
+    opacity: 1;
+}
+.buttons-deactivated{
+    opacity:1;
+    display:none;
+}
+.join-form-container{
+    display:none;
+    margin-left: auto;
+    margin-right: auto;
+    transition: opacity 1s ease-out;
+    opacity: 0;
+}
+
+.join-form-container-activated{
+    opacity: 1;
+    display: block;
+}
+.form-control{
+    margin-bottom: 15px;
+}
+.join-button{
+    width: 49%;
+}

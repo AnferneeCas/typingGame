@@ -1,6 +1,8 @@
 const socket = io("anfer.herokuapp.com");
 var challenge ="";
-joinRoom("game1");
+var room= document.querySelector(".roomNumber").innerText;
+console.log("room: "+  room);
+joinRoom(room);
 socket.on("message",function(msg){
     console.log(msg.text);
 });
@@ -8,7 +10,7 @@ socket.on("updateChallenge",function(newChallenge){
     
     var paragraph = document.querySelector("#textChallenge");
     paragraph.innerHTML=newChallenge;
-    console.log(paragraph.innerHTML);
+    console.log("challenge: "+paragraph.innerHTML);
     challenge=newChallenge;
 });
 

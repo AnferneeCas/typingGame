@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typing Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./styles2.css">
+</head>
+<body>
+    <div class="title-banner">
+        <p class="title">TYPING GAME</p>
+    </div>
+
+    <div class="content">
+         <span class="buttons">
+             <button id="button-join" class="btn btn-success btn-lg">Join Game</button>
+              <button id="button-create" class="btn btn-success btn-lg">Create Game</button>
+         </span> 
+        <span class="join-form-container" >
+            <form class="join-form" method="POST" action="/play" >
+                <input type="text" class="form-control" name="username"  placeholder="Username" required>
+                <input type="text" class="form-control" name="roomNumber" placeholder="Room Number" required>
+                <button type="button" class="btn btn-secondary join-button">Go Back</button>
+                <button type="submit" class="btn btn-primary join-button">Join</button> 
+            </form>
+        </span>
+    </div>
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/homeScripts.js"></script>
+</html>

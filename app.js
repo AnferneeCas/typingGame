@@ -1,5 +1,6 @@
 var express = require('express');
 var app = express();
+var bodyParser = require("body-parser");
 app.set('view engine', 'ejs');
 var port = process.env.PORT||3000;
 var socketio = require("socket.io");
@@ -8,9 +9,21 @@ var rooms=[
     {challenge: "In alcatra dolore, leberkas veniam pig cillum sirloin esse voluptate meatball non lorem. Labore flank exercitation jerky kevin pancetta ut in in deserunt aliqua swine ullamco velit strip steak. Est pastrami ham tri-tip bresaola ham hock. Burgdoggen t-bone nulla cow, tenderloin nisi quis incididunt drumstick reprehenderit labore do cillum flank pork belly. Buffalo t-bone kielbasa jerky, tongue pork loin non laboris in turducken tenderloin. Aute pork chop biltong turducken chicken capicola minim.",gameId:"game2"},
     {challenge: "Quis hamburger meatball burgdoggen. Leberkas dolore tail fatback andouille aliquip eiusmod ut ground round. In venison pork loin boudin pastrami incididunt. Frankfurter occaecat doner aute sausage. Chicken beef ribs est voluptate exercitation pig t-bone pork chop frankfurter capicola strip steak shoulder aliquip. Ut turducken esse frankfurter short ribs laboris.",gameId:"game3"}
 ]
+//app.use(bodyParser.json());
+
+app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname+'/public'));
-app.get("*",function(req,res){
-    res.render(__dirname + '/public/index.ejs');
+app.get("/",function(req,res){
+    res.render(__dirname + '/public/home.ejs');
+})
+
+app.post("/play",function(req,res){
+    var user= {
+         username:req.body.username,
+        roomNumber: req.body.roomNumber
+    }
+    
+    res.render(__dirname + '/public/index.ejs',{user:user});
 })
 
 const expressServer = app.listen(port);
@@ -21,11 +34,8 @@ io.on('connection',function(socket){
     console.log("user connected");
     socket.on("joinRoom",function(roomToJoin){
         socket.join(roomToJoin);
-        rooms.forEach(function(challenge){
-            if(challenge.gameId==roomToJoin){
-                socket.emit("updateChallenge",challenge.challenge);
-            }
-        });
+        socket.emit("updateChallenge",rooms[0].challenge);
+          
       
        
     });
