@@ -35,15 +35,15 @@ io.on('connection',function(socket){
     socket.on("joinRoom",function(roomToJoin){
         socket.join(roomToJoin);
         socket.emit("updateChallenge",rooms[0].challenge);
-          
-      
-       
+                   
     });
      io.emit("message",{
          text: "hey"
      });
      socket.on('inputChange',function(change,challenge){
-        socket.broadcast.emit('newChange',change);
+        const roomTitle = Object.keys(socket.rooms)[1];
+        console.log(roomTitle);
+        socket.broadcast.to(roomTitle).emit('newChange',change);
         var win=true;
         for(var i=0;i<=challenge.length;i++)
         {
