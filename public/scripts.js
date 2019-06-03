@@ -1,4 +1,4 @@
-const socket = io("localhost:3000");
+const socket = io("anfer.herokuapp.com");
 var challenge ="";
 var room= document.querySelector(".roomNumber").innerText;
 console.log("room: "+  room);
