@@ -1,5 +1,6 @@
 function joinRoom(roomName){
-    socket.emit("joinRoom",roomName);
+    var user =document.querySelector(".roomUser").innerText;
+    socket.emit("joinRoom",roomName,user);
 
     var textArea = document.querySelector("#player1");
     textArea.addEventListener('input',function(e){

@@ -6,8 +6,16 @@
     <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-<span class="roomNumber" style="display:none"><%=user.roomNumber%></span>;
-<span class="banner"><p class="bannerText">winner</p></span>
+<div class="players-stats">
+ <p class="stats-title">PLAYERS</p>
+   <ul class="players-list">
+       
+   </ul>
+   <p class="room-number">Room Number: <%=user.roomNumber%></p>
+</div>
+<span class="roomNumber" style="display:none"><%=user.roomNumber%></span>
+<span class="roomUser" style="display:none"><%=user.username%></span>
+<span class="banner"><p class="bannerText">winner</p> <a href="/" class="btn btn-primary play-again">PLAY AGAIN</a></span>
     <div class= "playground1">
         <div class="content">
             <div class="textBox"><p id="textChallenge"></p></div>

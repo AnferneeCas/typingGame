@@ -1,4 +1,4 @@
-const socket = io("anfer.herokuapp.com");
+const socket = io("localhost:3000");
 var challenge ="";
 var room= document.querySelector(".roomNumber").innerText;
 console.log("room: "+  room);
@@ -28,4 +28,15 @@ socket.on("loss",function(){
     document.getElementById("player1").disabled = true;
     console.log("YOu have lost");
 });
+
+socket.on("newPlayer",function(username){
+    console.log(username);
+    document.querySelector(".players-list").innerHTML="";
+    username.forEach(function(user){
+    var newPlayer = document.createElement("li");
+    newPlayer.appendChild(document.createTextNode(user));
+    document.getElementsByClassName("players-list")[0].innerHTML+=`<li>${user.username}</li>`
+    }) ;
+    
+})
 

@@ -58,6 +58,7 @@ html,body{
     transition: opacity 1s ease-out;
     opacity: 0;
     position: absolute;
+    justify-content: center;
 
 }
 
@@ -65,8 +66,34 @@ html,body{
     text-transform: uppercase;
     font-weight: bold;
     font-size: -webkit-xxx-large;
-    margin: auto;
+    
     color: aliceblue;
+}
+.play-again{
+    margin-left: 15px;
+    margin-top: 15px;
+    height: 50%;
+}
+.players-stats{
+    display:grid;
+    height: 15%;
+    width: 10%;
+    margin-top: 15%;
+    position: absolute;
+    background-color: #06B184;
+    justify-content: center;
+
+}
+.players-list{
+    align-self: center;
+}
+.stats-title{
+    position: relative;
+    margin-left: 25%;
+}
+.room-number{
+    position: relative;
+    
 }
 /* html,body{
     margin:0;
